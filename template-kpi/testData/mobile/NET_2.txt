@@ -1,0 +1,5 @@
+A	001	jizhan1	2013-09-12 09:00:00	www.baidu.com
+A	001	jizhan1	2013-09-12 09:45:00	www.google.com
+A	001	jizhan2	2013-09-12 09:50:00	www.hao123.com
+B	002	jizhan2	2013-09-12 09:30:00	www.baidu.com
+B	002	jizhan2	2013-09-12 10:00:00	www.jd.com
