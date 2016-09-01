@@ -1,4 +1,18 @@
 package com.llw.mobileoperators.mr;
+/*
+ * 该类计算每个用户在不同时段每个基站停留的时间
+ * 输出格式如下：
+用户名|基站名|时间段|停留时间
+0000000000|00000133|00-05|1.9333334
+0000000000|00000158|00-05|7.45
+0000000000|00000041|00-05|44.100002
+0000000000|00000194|00-05|57.1
+0000000000|00000128|00-05|25.166666
+0000000000|00000183|00-05|25.783333
+0000000000|00000186|00-05|16.183332
+0000000000|00000002|00-05|25.583332
+0000000000|00000037|00-05|24.133331
+ */
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -66,6 +80,10 @@ public class BaseStationDataPreprocess {
 				context.getCounter(Counter.LINESKIP).increment(1);
 				return;
 			}
+			/*
+			 * 用户名+时间段作为key
+			 * 基站名+停留时间作为value
+			 */
 			context.write(tableLine.outKey(), tableLine.outValue());
 		}
 
